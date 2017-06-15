@@ -1,0 +1,16 @@
+* Repro Case for CLJS-1921
+
+This repository contains ClojureSript source files that
+attempt to reproduce a problem reported in [[https://dev.clojure.org/jira/browse/CLJS-1921][JIRA]] about
+constant redefinition errors.
+
+**  Caveats
+The ticket states that this problem is non-deterministic, failing only "when the
+stars align". This repo is only intended to make it easy for others to try
+reproducing the reported issue.
+
+** Building
+
+ - Run ~make clean serial~ to try building the code without parallelism.
+ - Run ~make clean parallel~ to try building the code with the ~:parallel-build~
+   compiler option.
